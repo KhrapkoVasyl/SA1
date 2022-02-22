@@ -5,6 +5,8 @@ import (
 )
 
 func main() {
-  http.HandleFunc("/", nil)
+  http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+    w.Write([]byte("Hello!"))
+  })
   http.ListenAndServe(":8000", nil)
 }
