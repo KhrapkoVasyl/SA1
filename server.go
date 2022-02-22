@@ -26,7 +26,6 @@ func handleRequest(rw http.ResponseWriter, r *http.Request) {
 func main() {
 
 
-
   http.HandleFunc("/time", handleRequest) 
   http.ListenAndServe(":8795", nil)
 }
