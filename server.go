@@ -2,10 +2,12 @@ package main
 
 import (
 	"net/http"
+	"time"
 )
 
 func handleRequest(rw http.ResponseWriter, r *http.Request) {
-    rw.Write([]byte("Hello!"))
+	currentDate := time.Now().Format(time.RFC3339)
+    rw.Write([]byte(currentDate))
 }
 
 func main() {
