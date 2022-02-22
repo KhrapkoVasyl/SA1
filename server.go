@@ -18,7 +18,7 @@ func handleRequest(rw http.ResponseWriter, r *http.Request) {
 
   err := json.NewEncoder(rw).Encode(resp)
   if err != nil {
-    log.Fatalf("Error happened in JSON marshal. Err: %s", err)
+    log.Fatalf("Error happened in while encoding. Err: %s", err)
   }
 }
 
